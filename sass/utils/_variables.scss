@@ -1,0 +1,18 @@
+:root {
+    /*Основные шрифты*/
+    --main-font: 'Roboto', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
+    --accent-txt: #2196f3;
+    /*Цвет текста светлая тема*/
+    --primary-txt--mode-light: #212121;
+    --secondary-txt--mode-light: #757575;
+    /*Цвет текста темная тема*/
+    --primary-txt--mode-black: #ffffff;
+    --secondary-txt--mode-black: rgba(255, 255, 255, 0.6);
+    /* Цвет фона */
+    --main-bg: #e5e5e5;
+    /* Светлая тема фона */
+    --light-bg: #f5f4fa;
+    /* Темная тема фона */
+    --dark-bg: #2f303a;
+}

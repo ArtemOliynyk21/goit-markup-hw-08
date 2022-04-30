@@ -1,0 +1,34 @@
+//varibels
+@import "./utils/variables";
+
+//base style
+@import "./base/base";
+
+//placeholders
+@import "./utils/placeholders";
+
+//container
+@import "./components/container";
+
+//header
+@import "./components/header";
+
+//index
+@import "./components/hero";
+@import "./components/benefits";
+@import "./components/services";
+@import "./components/team";
+@import "./components/clients";
+
+//footer
+@import "./components/footer";
+
+//portfolio
+@import "./components/portfolio-buttons";
+@import "./components/portfolio";
+
+//modal
+@import "./components/backdrop";
+@import "./components/modal";
+
+
