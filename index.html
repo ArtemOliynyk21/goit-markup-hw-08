@@ -118,8 +118,8 @@
           <button class="hero__button" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
-      <!--Наши приемущества-->
-      <!-- <section class="section">
+      <!--Наши приемущества -->
+      <section class="section">
         <div class="container">
           <h2 class="visually-hidden">Преимущества</h2>
           <ul class="benefits">
@@ -140,8 +140,8 @@
                   <use href="./images/icons.svg#icon-clock"></use>
                 </svg>
               </div>
-              <h3 class="benefits-title">Пунктуальность</h3>
-              <p class="benefits-text">
+              <h3 class="benefits__title">Пунктуальность</h3>
+              <p class="benefits__text">
                 Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
               </p>
             </li>
@@ -169,9 +169,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!--Что мы можем-->
-      <!-- <section class="section section--nopading-top">
+      <section class="section section--nopading-top">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="services">
@@ -213,19 +213,28 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!--Наши сотрудники-->
-      <!-- <section class="section section--user-background">
+      <section class="section section--user-background">
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
           <ul class="team">
             <li class="team__item">
-              <img
-                class="team__foto"
-                src="./images/worker_1.jpg"
-                alt="Product Designer"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/worker1-lg.jpg 1x, ./images/worker1@2x-lg.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/worker1-md.jpg 1x, ./images/worker1@2x-md.jpg 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/worker1-sm.jpg 1x, ./images/worker1@2x-sm.jpg 2x"
+                />
+                <img class="team__foto" src="./images/worker_1.jpg" alt="Product Designer" />
+              </picture>
               <div class="team__info">
                 <h3 class="team__title">Игорь Демьяненко</h3>
                 <p class="team__text">Product Designer</p>
@@ -246,7 +255,7 @@
                   </li>
                   <li class="socials__item">
                     <a href="" class="socials__link">
-                      <svg width="20px" height="20px" class="ssocials__icons">
+                      <svg width="20px" height="20px" class="socials__icons">
                         <use href="./images/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
@@ -262,12 +271,21 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__foto"
-                src="./images/worker_2.jpg"
-                alt="Frontend Developer"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/worker2-lg.jpg 1x, ./images/worker2@2x-lg.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/worker2-md.jpg 1x, ./images/worker2@2x-md.jpg 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/worker2-sm.jpg 1x, ./images/worker2@2x-sm.jpg 2x"
+                />
+                <img class="team__foto" src="./images/worker_2.jpg" alt="Frontend Developer" />
+              </picture>
               <div class="team__info">
                 <h3 class="team__title">Ольга Репина</h3>
                 <p class="team__text">Frontend Developer</p>
@@ -304,7 +322,21 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__foto" src="./images/worker_3.jpg" alt="Marketing" width="270" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/worker3-lg.jpg 1x, ./images/worker3@2x-lg.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/worker3-md.jpg 1x, ./images/worker3@2x-md.jpg 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/worker3-sm.jpg 1x, ./images/worker3@2x-sm.jpg 2x"
+                />
+                <img class="team__foto" src="./images/worker_3.jpg" alt="Marketing" />
+              </picture>
               <div class="team__info">
                 <h3 class="team__title">Николай Тарасов</h3>
                 <p class="team__text">Marketing</p>
@@ -341,7 +373,21 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__foto" src="./images/worker_4.jpg" alt="UI Designer" width="270" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/worker4-lg.jpg 1x, ./images/worker4@2x-lg.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/worker4-md.jpg 1x, ./images/worker4@2x-md.jpg 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/worker4-sm.jpg 1x, ./images/worker4@2x-sm.jpg 2x"
+                />
+                <img class="team__foto" src="./images/worker_4.jpg" alt="UI Designer" />
+              </picture>
               <div class="team__info">
                 <h3 class="team__title">Михаил Ермаков</h3>
                 <p class="team__text">UI Designer</p>
@@ -379,9 +425,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!--Наши клиенты-->
-      <!-- <section class="section">
+      <section class="section">
         <div class="container">
           <h2 class="section__title">Постоянные клиенты</h2>
           <ul class="clients">
@@ -429,9 +475,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer__container">
         <div class="footer__contacts">
           <a class="logo" href="./index.html"> <span class="logo--blue">Web</span>Studio</a>
@@ -497,7 +543,7 @@
           </div>
         </form>
       </div>
-    </footer> -->
+    </footer>
     <!-- Модальное окно -->
     <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">

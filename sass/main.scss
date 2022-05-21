@@ -1,37 +1,38 @@
 //varibels
-@import "./utils/variables";
+@import './utils/variables';
+
+//mixins
+@import './utils/mixins';
 
 //base style
-@import "./base/base";
+@import './base/base';
 
 //placeholders
-@import "./utils/placeholders";
+@import './utils/placeholders';
 
 //container
-@import "./components/container";
+@import './components/container';
 
 //header
-@import "./components/header";
+@import './components/header';
 
 //index
-@import "./components/hero";
-@import "./components/benefits";
-@import "./components/services";
-@import "./components/team";
-@import "./components/clients";
+@import './components/hero';
+@import './components/benefits';
+@import './components/services';
+@import './components/team';
+@import './components/clients';
 
 //footer
-@import "./components/footer";
+@import './components/footer';
 
 //portfolio
-@import "./components/portfolio-buttons";
-@import "./components/portfolio";
+@import './components/portfolio-buttons';
+@import './components/portfolio';
 
 //modal
-@import "./components/backdrop";
-@import "./components/modal";
+@import './components/backdrop';
+@import './components/modal';
 
 // mobile-menu
-@import "./components/mobile-menu"
-
-
+@import './components/mobile-menu';
