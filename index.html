@@ -35,6 +35,37 @@
             <use class="menu-btn__icon--close" href="./images/icons.svg#icon-menu-close"></use>
           </svg>
         </button>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link link nav__link--current" href="./index.html">Студия</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link link" href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="contact">
+          <li class="contact__item">
+            <a class="contact__link link" href="mailto:info@devstudio.com">
+              <svg class="contact__icon" width="16px" height="12px">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="contact__item">
+            <a class="contact__link link" href="tel:+380961111111">
+              <svg class="contact__icon" width="10px" height="16px">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
 
         <!-- Мобильное меню -->
         <div class="mobile-menu" data-menu is-open>
@@ -50,18 +81,21 @@
                 <a class="mobile-nav__link" href="">Контакты</a>
               </li>
             </ul>
-            <ul class="contact">
-              <li class="contact__item">
-                <a class="contact__link contact__link--email" href="mailto:info@devstudio.com">
-                  <svg class="contact__icon" width="16px" height="12px">
+            <ul class="mobile-contact">
+              <li class="mobile-contact__item">
+                <a
+                  class="mobile-contact__link mobile-contact__link--email"
+                  href="mailto:info@devstudio.com"
+                >
+                  <svg class="mobile-contact__icon" width="16px" height="12px">
                     <use href="./images/icons.svg#icon-envelope"></use>
                   </svg>
                   info@devstudio.com
                 </a>
               </li>
-              <li class="contact__item">
-                <a class="contact__link contact__link--tel" href="tel:+380961111111">
-                  <svg class="contact__icon" width="10px" height="16px">
+              <li class="mobile-contact__item">
+                <a class="mobile-contact__link mobile-contact__link--tel" href="tel:+380961111111">
+                  <svg class="mobile-contact__icon" width="10px" height="16px">
                     <use href="./images/icons.svg#icon-smartphone"></use>
                   </svg>
                   +38 096 111 11 11</a
@@ -533,7 +567,13 @@
         <form class="subscription">
           <p class="subscription__title">Подпишитесь на рассылку</p>
           <div class="subscription__form">
-            <input class="subscription__input" type="email" name="email" id="email" placeholder="E-mail" />
+            <input
+              class="subscription__input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+            />
             <button tupe="submit" class="subscription__btn">
               Подписаться
               <svg width="24px" height="24px" class="subscription__icon">
@@ -545,7 +585,7 @@
       </div>
     </footer>
     <!-- Модальное окно -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="btn-close" data-modal-close>
           <svg width="30px" height="30px" class="btn-close_icon">
@@ -589,14 +629,14 @@
             <label class="cheсkbox__label" for="agree">
               <input class="cheсkbox__input" type="checkbox" name="agree" id="agree" />
               <span class="cheсkbox__check"></span>
-              Соглашаюсь с рассылкой и принимаю
+              <p class="cheсkbox__text">Соглашаюсь с рассылкой и принимаю</p>
               <a class="cheсkbox__link" href="">Условия договора</a>
             </label>
           </div>
           <button class="btn-submit" type="submit">Отправить</button>
         </form>
       </div>
-    </div> -->
+    </div>
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
   </body>

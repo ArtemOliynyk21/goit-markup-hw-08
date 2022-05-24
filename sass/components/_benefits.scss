@@ -1,11 +1,21 @@
 .benefits {
-  @include mq (desktop) {
+  @include mq(tablet) {
     display: flex;
+  }
+  @include mq(tablet-only) {
+    flex-wrap: wrap;
   }
 }
 
-.benefits__item:not(:last-child) {
+.benefits__item {
   margin: 0px auto;
+    @include mq(tablet-only) {
+    margin: 15px;
+    flex-basis: calc(100% / 2 - 30px);
+  }
+  @include mq(desktop) {
+    flex-basis: calc(100% / 4 - 30px);
+  }
 }
 
 .benefits__icon-box {

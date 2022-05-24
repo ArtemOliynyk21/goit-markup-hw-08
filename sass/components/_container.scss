@@ -4,7 +4,7 @@
   padding-right: 15px;
   margin: 0 auto;
 
-  @media screen and (min-width: 480px) {
+  @include mq(mobile) {
     width: 480px;
   }
 
@@ -14,5 +14,6 @@
 
   @include mq(desktop) {
     width: 1200px;
-  }
+    padding: 0;
+    }
 }
