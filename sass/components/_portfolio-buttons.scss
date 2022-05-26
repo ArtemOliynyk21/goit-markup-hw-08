@@ -1,13 +1,28 @@
 .examples-selection__list {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  margin-bottom: 40px;
+
+  @include mq(mobile-only) {
+    flex-wrap: wrap;
+  }
+  @include mq(tablet) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
 }
 
-.examples-selection__item:not(:last-child) {
-  margin-right: 8px;
-}
+.examples-selection__item {
+  @include mq(mobile-only) {
+    margin-bottom: 15px;
+  }
 
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
 .examples-selection__btn {
   min-width: 73px;
   padding: 6px 22px;

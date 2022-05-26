@@ -20,16 +20,27 @@
   <body>
     <header class="header">
       <div class="header__container container">
-        <a class="logo link" href="./index.html">
-          <span class="logo--blue">Web</span>Studio</a
+        <a class="logo" href="./index.html"> <span class="logo--blue">Web</span>Studio</a>
+        <button
+          class="menu-btn is-active"
+          type="button"
+          aria-label="Кнопка открытия меню"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
         >
+          <svg class="menu-btn__icon" width="40px" height="40px">
+            <use class="menu-btn__icon--open" href="./images/icons.svg#icon-menu-open"></use>
+            <use class="menu-btn__icon--close" href="./images/icons.svg#icon-menu-close"></use>
+          </svg>
+        </button>
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link link" href="./index.html">Студия</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link link nav__link--current" href="">Портфолио</a>
+              <a class="nav__link link nav__link--current" href="./portfolio.html">Портфолио</a>
             </li>
             <li class="nav__item">
               <a class="nav__link link" href="">Контакты</a>
@@ -56,6 +67,81 @@
         </ul>
       </div>
     </header>
+    <!-- Мобильное меню -->
+        <div class="mobile-menu" data-menu is-open>
+          <nav class="mobile-nav">
+            <ul class="mobile-nav__list">
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="./index.html">Студия</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link mobile-nav__link--current" href="">Портфолио</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="">Контакты</a>
+              </li>
+            </ul>
+            <ul class="mobile-contact">
+              <li class="mobile-contact__item">
+                <a
+                  class="mobile-contact__link mobile-contact__link--email"
+                  href="mailto:info@devstudio.com"
+                >
+                  <svg class="mobile-contact__icon" width="16px" height="12px">
+                    <use href="./images/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="mobile-contact__item">
+                <a class="mobile-contact__link mobile-contact__link--tel" href="tel:+380961111111">
+                  <svg class="mobile-contact__icon" width="10px" height="16px">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-socials">
+              <li class="mobile-socials__item">
+                <a
+                  class="mobile-socials__link"
+                  href="http://"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mobile-socials__item">
+                <a
+                  class="mobile-socials__link"
+                  href="http://"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mobile-socials__item">
+                <a
+                  class="mobile-socials__link"
+                  href="http://"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mobile-socials__item">
+                <a
+                  class="mobile-socials__link"
+                  href="http://"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
     <main>
       <section class="section examples">
         <div class="container">
@@ -81,12 +167,30 @@
             <li class="examples__item">
               <a class="examples__link link" href="">
                 <div class="examples__card">
-                  <img
-                    class="examples__pic"
-                    src="./images/tehnokrak.jpg"
-                    alt="Ноутбук"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ../images/portfolio/portfolio-1-lg.jpg    1x,
+                        ../images/portfolio/portfolio-1-lg@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ../images/portfolio/portfolio-1-md.jpg    1x,
+                        ../images/portfolio/portfolio-1-md@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ../images/portfolio/portfolio-1-sm.jpg    1x,
+                        ../images/portfolio/portfolio-1-sm@2x.jpg 2x
+                      "
+                    />
+                    <img class="examples__pic" src="./images/tehnokrak.jpg" alt="Ноутбук" />
+                  </picture>
                   <div class="examples__card--overlay">
                     <p class="examples__card--overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -104,12 +208,30 @@
             <li class="examples__item">
               <a class="examples__link link" href="">
                 <div class="examples__card">
-                  <img
-                    class="examples__pic"
-                    src="./images/neworlean.jpg"
-                    alt="Баскетбол"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ../images/portfolio/portfolio-2-lg.jpg    1x,
+                        ../images/portfolio/portfolio-2-lg@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ../images/portfolio/portfolio-2-md.jpg    1x,
+                        ../images/portfolio/portfolio-2-md@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ../images/portfolio/portfolio-2-sm.jpg    1x,
+                        ../images/portfolio/portfolio-2-sm@2x.jpg 2x
+                      "
+                    />
+                    <img class="examples__pic" src="./images/neworlean.jpg" alt="Баскетбол" />
+                  </picture>
                   <div class="examples__card--overlay">
                     <p class="examples__card--overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -127,12 +249,30 @@
             <li class="examples__item">
               <a class="examples__link link" href="">
                 <div class="examples__card">
-                  <img
-                    class="examples__pic"
-                    src="./images/seafood.jpg"
-                    alt="Ресторан"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ../images/portfolio/portfolio-3-lg.jpg    1x,
+                        ../images/portfolio/portfolio-3-lg@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ../images/portfolio/portfolio-3-md.jpg    1x,
+                        ../images/portfolio/portfolio-3-md@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ../images/portfolio/portfolio-3-sm.jpg    1x,
+                        ../images/portfolio/portfolio-3-sm@2x.jpg 2x
+                      "
+                    />
+                    <img class="examples__pic" src="./images/seafood.jpg" alt="Ресторан" />
+                  </picture>
                   <div class="examples__card--overlay">
                     <p class="examples__card--overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -150,7 +290,30 @@
             <li class="examples__item">
               <a class="examples__link link" href="">
                 <div class="examples__card">
-                  <img class="examples__pic" src="./images/prime.jpg" alt="Наушники" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ../images/portfolio/portfolio-4-lg.jpg    1x,
+                        ../images/portfolio/portfolio-4-lg@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ../images/portfolio/portfolio-4-md.jpg    1x,
+                        ../images/portfolio/portfolio-4-md@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ../images/portfolio/portfolio-4-sm.jpg    1x,
+                        ../images/portfolio/portfolio-4-sm@2x.jpg 2x
+                      "
+                    />
+                    <img class="examples__pic" src="./images/prime.jpg" alt="Наушники" />
+                  </picture>
                   <div class="examples__card--overlay">
                     <p class="examples__card--overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -168,7 +331,30 @@
             <li class="examples__item">
               <a class="examples__link link" href="">
                 <div class="examples__card">
-                  <img class="examples__pic" src="./images/boxes.jpg" alt="Коробки" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ../images/portfolio/portfolio-5-lg.jpg    1x,
+                        ../images/portfolio/portfolio-5-lg@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ../images/portfolio/portfolio-5-md.jpg    1x,
+                        ../images/portfolio/portfolio-5-md@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ../images/portfolio/portfolio-5-sm.jpg    1x,
+                        ../images/portfolio/portfolio-5-sm@2x.jpg 2x
+                      "
+                    />
+                    <img class="examples__pic" src="./images/boxes.jpg" alt="Коробки" />
+                  </picture>
                   <div class="examples__card--overlay">
                     <p class="examples__card--overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -186,12 +372,30 @@
             <li class="examples__item">
               <a class="examples__link link" href="">
                 <div class="examples__card">
-                  <img
-                    class="examples__pic"
-                    src="./images/inspritation.jpg"
-                    alt="Монитор"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ../images/portfolio/portfolio-6-lg.jpg    1x,
+                        ../images/portfolio/portfolio-6-lg@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ../images/portfolio/portfolio-6-md.jpg    1x,
+                        ../images/portfolio/portfolio-6-md@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ../images/portfolio/portfolio-6-sm.jpg    1x,
+                        ../images/portfolio/portfolio-6-sm@2x.jpg 2x
+                      "
+                    />
+                    <img class="examples__pic" src="./images/inspritation.jpg" alt="Монитор" />
+                  </picture>
                   <div class="examples__card--overlay">
                     <p class="examples__card--overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -209,7 +413,30 @@
             <li class="examples__item">
               <a class="examples__link link" href="">
                 <div class="examples__card">
-                  <img class="examples__pic" src="./images/limited.jpg" alt="Журнал" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ../images/portfolio/portfolio-7-lg.jpg    1x,
+                        ../images/portfolio/portfolio-7-lg@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ../images/portfolio/portfolio-7-md.jpg    1x,
+                        ../images/portfolio/portfolio-7-md@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ../images/portfolio/portfolio-7-sm.jpg    1x,
+                        ../images/portfolio/portfolio-7-sm@2x.jpg 2x
+                      "
+                    />
+                    <img class="examples__pic" src="./images/limited.jpg" alt="Журнал" />
+                  </picture>
                   <div class="examples__card--overlay">
                     <p class="examples__card--overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -227,7 +454,30 @@
             <li class="examples__item">
               <a class="examples__link link" href="">
                 <div class="examples__card">
-                  <img class="examples__pic" src="./images/lab.jpg" alt="Бирка" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ../images/portfolio/portfolio-8-lg.jpg    1x,
+                        ../images/portfolio/portfolio-8-lg@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ../images/portfolio/portfolio-8-md.jpg    1x,
+                        ../images/portfolio/portfolio-8-md@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ../images/portfolio/portfolio-8-sm.jpg    1x,
+                        ../images/portfolio/portfolio-8-sm@2x.jpg 2x
+                      "
+                    />
+                    <img class="examples__pic" src="./images/lab.jpg" alt="Бирка" />
+                  </picture>
                   <div class="examples__card--overlay">
                     <p class="examples__card--overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -245,7 +495,30 @@
             <li class="examples__item">
               <a class="examples__link link" href="">
                 <div class="examples__card">
-                  <img class="examples__pic" src="./images/growing.jpg" alt="Ноутбук" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ../images/portfolio/portfolio-9-lg.jpg    1x,
+                        ../images/portfolio/portfolio-9-lg@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ../images/portfolio/portfolio-9-md.jpg    1x,
+                        ../images/portfolio/portfolio-9-md@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ../images/portfolio/portfolio-9-sm.jpg    1x,
+                        ../images/portfolio/portfolio-9-sm@2x.jpg 2x
+                      "
+                    />
+                    <img class="examples__pic" src="./images/growing.jpg" alt="Ноутбук" />
+                  </picture>
                   <div class="examples__card--overlay">
                     <p class="examples__card--overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -266,60 +539,58 @@
     </main>
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer__contacts">
-          <a class="logo" href="./index.html">
-            <span class="logo--blue">Web</span>Studio</a
-          >
-          <address class="address">
-            <ul class="address__list">
-              <li class="address__item">
-                <a class="address__link" href="https://goo.gl/maps/LVAJjjuwZ4dbW4YDA"
-                  >г. Киев, пр-т Леси Украинки, 26</a
-                >
+        <div class="contact-wrapрer">
+          <div class="footer__contacts contact-wrapрer__element">
+            <a class="logo" href="./index.html"> <span class="logo--blue">Web</span>Studio</a>
+            <address class="address">
+              <ul class="address__list">
+                <li class="address__item">
+                  <a class="address__link" href="https://goo.gl/maps/LVAJjjuwZ4dbW4YDA"
+                    >г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a class="address__contacts" href="mailto:info@example.com">info@example.com</a>
+                </li>
+                <li class="address__item">
+                  <a class="address__contacts" href="tel:+380991111111">+38 099 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-socials contact-wrapрer__element">
+            <p class="footer-socials__title">Присоеденяйтесь</p>
+            <ul class="footer-socials__list">
+              <li class="footer-socials__item">
+                <a href="" class="footer-socials__link">
+                  <svg width="20px" height="20px" class="footer-socials__icon">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a class="address__contacts" href="mailto:info@example.com"
-                  >info@example.com</a
-                >
+              <li class="footer-socials__item">
+                <a href="" class="footer-socials__link">
+                  <svg width="20px" height="20px" class="footer-socials__icon">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a class="address__contacts" href="tel:+380991111111">+38 099 111 11 11</a>
+              <li class="footer-socials__item">
+                <a href="" class="footer-socials__link">
+                  <svg width="20px" height="20px" class="footer-socials__icon">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-socials__item">
+                <a href="" class="footer-socials__link">
+                  <svg width="20px" height="20px" class="footer-socials__icon">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer-socials">
-          <p class="footer-socials__title">Присоеденяйтесь</p>
-          <ul class="footer-socials__list">
-            <li class="footer-socials__item">
-              <a href="" class="footer-socials__link">
-                <svg width="20px" height="20px" class="footer-socials__icon">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-socials__item">
-              <a href="" class="footer-socials__link">
-                <svg width="20px" height="20px" class="footer-socials__icon">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-socials__item">
-              <a href="" class="footer-socials__link">
-                <svg width="20px" height="20px" class="footer-socials__icon">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-socials__item">
-              <a href="" class="footer-socials__link">
-                <svg width="20px" height="20px" class="footer-socials__icon">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <form class="subscription">
           <p class="subscription__title">Подпишитесь на рассылку</p>
@@ -341,5 +612,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
