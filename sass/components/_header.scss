@@ -6,7 +6,7 @@
 .header__container {
   display: flex;
   align-items: center;
-  
+
   @include mq(desktop) {
     padding-left: 15px;
     padding-right: 15px;
