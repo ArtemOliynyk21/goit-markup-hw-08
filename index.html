@@ -66,85 +66,83 @@
             >
           </li>
         </ul>
-
-        
       </div>
     </header>
     <!-- Мобильное меню -->
-        <div class="mobile-menu" data-menu is-open>
-          <nav class="mobile-nav">
-            <ul class="mobile-nav__list">
-              <li class="mobile-nav__item">
-                <a class="mobile-nav__link mobile-nav__link--current" href="">Студия</a>
-              </li>
-              <li class="mobile-nav__item">
-                <a class="mobile-nav__link" href="./portfolio.html">Портфолио</a>
-              </li>
-              <li class="mobile-nav__item">
-                <a class="mobile-nav__link" href="">Контакты</a>
-              </li>
-            </ul>
-            <ul class="mobile-contact">
-              <li class="mobile-contact__item">
-                <a
-                  class="mobile-contact__link mobile-contact__link--email"
-                  href="mailto:info@devstudio.com"
-                >
-                  <svg class="mobile-contact__icon" width="16px" height="12px">
-                    <use href="./images/icons.svg#icon-envelope"></use>
-                  </svg>
-                  info@devstudio.com
-                </a>
-              </li>
-              <li class="mobile-contact__item">
-                <a class="mobile-contact__link mobile-contact__link--tel" href="tel:+380961111111">
-                  <svg class="mobile-contact__icon" width="10px" height="16px">
-                    <use href="./images/icons.svg#icon-smartphone"></use>
-                  </svg>
-                  +38 096 111 11 11</a
-                >
-              </li>
-            </ul>
-            <ul class="mobile-socials">
-              <li class="mobile-socials__item">
-                <a
-                  class="mobile-socials__link"
-                  href="https://www.instagram.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Instagram</a
-                >
-              </li>
-              <li class="mobile-socials__item">
-                <a
-                  class="mobile-socials__link"
-                  href="https://twitter.com/?lang=uk"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Twitter</a
-                >
-              </li>
-              <li class="mobile-socials__item">
-                <a
-                  class="mobile-socials__link"
-                  href="https://m.facebook.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Facebook</a
-                >
-              </li>
-              <li class="mobile-socials__item">
-                <a
-                  class="mobile-socials__link"
-                  href="https://www.linkedin.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >LinkedIn</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
+    <div class="mobile-menu" data-menu is-open>
+      <nav class="mobile-nav">
+        <ul class="mobile-nav__list">
+          <li class="mobile-nav__item">
+            <a class="mobile-nav__link mobile-nav__link--current" href="">Студия</a>
+          </li>
+          <li class="mobile-nav__item">
+            <a class="mobile-nav__link" href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class="mobile-nav__item">
+            <a class="mobile-nav__link" href="">Контакты</a>
+          </li>
+        </ul>
+        <ul class="mobile-contact">
+          <li class="mobile-contact__item">
+            <a
+              class="mobile-contact__link mobile-contact__link--email"
+              href="mailto:info@devstudio.com"
+            >
+              <svg class="mobile-contact__icon" width="16px" height="12px">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="mobile-contact__item">
+            <a class="mobile-contact__link mobile-contact__link--tel" href="tel:+380961111111">
+              <svg class="mobile-contact__icon" width="10px" height="16px">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-socials">
+          <li class="mobile-socials__item">
+            <a
+              class="mobile-socials__link"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
+          </li>
+          <li class="mobile-socials__item">
+            <a
+              class="mobile-socials__link"
+              href="https://twitter.com/?lang=uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Twitter</a
+            >
+          </li>
+          <li class="mobile-socials__item">
+            <a
+              class="mobile-socials__link"
+              href="https://m.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Facebook</a
+            >
+          </li>
+          <li class="mobile-socials__item">
+            <a
+              class="mobile-socials__link"
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
     <main>
       <!-- Герой -->
       <section class="hero">
@@ -599,21 +597,21 @@
           <p class="modal-form__title">Оставьте свои данные, мы вам перезвоним</p>
           <div class="modal-form__field">
             <label class="modal-form__label" for="username">Имя</label>
-            <input class="modal-form__input" type="text" name="username" id="username" />
+            <input class="modal-form__input" type="text" name="username" id="username" required />
             <svg class="modal-form__svg" width="12px" height="12px" class="person-icons">
               <use href="./images/icons.svg#icon-person"></use>
             </svg>
           </div>
           <div class="modal-form__field">
             <label class="modal-form__label" for="tel">Телефон</label>
-            <input class="modal-form__input" type="tel" name="tel" id="tel" />
+            <input class="modal-form__input" type="tel" name="tel" id="tel" required />
             <svg class="modal-form__svg" width="13px" height="13px" class="tel-icons">
               <use href="./images/icons.svg#icon-tel"></use>
             </svg>
           </div>
           <div class="modal-form__field">
             <label class="modal-form__label" for="mail">Почта</label>
-            <input class="modal-form__input" type="email" name="mail" id="mail" />
+            <input class="modal-form__input" type="email" name="mail" id="mail" required />
             <svg class="modal-form__svg" width="15px" height="12px" class="mail-icons">
               <use href="./images/icons.svg#icon-mail"></use>
             </svg>

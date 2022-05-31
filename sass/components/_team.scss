@@ -33,13 +33,13 @@
   text-align: center;
 }
 
-// .team__item:not(:last-child) {
-//   margin-right: 30px;
-// }
-
 .team__info {
   padding-top: 30px;
   padding-bottom: 30px;
+
+  @include mq(notDesktop) {
+    padding-bottom: 24px;
+  }
 }
 
 .team__title {

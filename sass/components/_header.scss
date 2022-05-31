@@ -6,6 +6,7 @@
 .header__container {
   display: flex;
   align-items: center;
+  
   @include mq(desktop) {
     padding-left: 15px;
     padding-right: 15px;
@@ -38,52 +39,13 @@
   }
 }
 
-// Кнопка мобильного меню
-.menu-btn {
-  position: relative;
-  margin-left: auto;
-  display: block;
-  padding: 0;
-  border: 0px;
-  cursor: pointer;
-  background-color: transparent;
-  z-index: 2;
-
-  @include mq(tablet) {
-    display: none;
-  }
-
-  &__icon {
-    width: 40px;
-    height: 40px;
-
-    &--close {
-      opacity: 1;
-    }
-
-    &--open {
-      opacity: 0;
-    }
-  }
-  &:hover,
-  &:focus {
-    fill: var(--accent-txt);
-  }
-}
-.menu-btn.is-active .menu-btn__icon--close {
-  opacity: 0;
-}
-.menu-btn.is-active .menu-btn__icon--open {
-  opacity: 1;
-}
-
 // Навигация
 .nav__list {
   display: flex;
 
-  & .link.current {
-    color: var(--accent-txt);
-  }
+  // & .link--current {
+  //   color: var(--accent-txt);
+  // }
 }
 
 .nav__item:not(:last-child) {
@@ -112,6 +74,10 @@
   @include mq(desktop) {
     padding-top: 32px;
     padding-bottom: 32px;
+  }
+
+  &--current {
+    color: var(--accent-txt);
   }
 
   &:hover,

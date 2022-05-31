@@ -9,7 +9,13 @@
 
 .benefits__item {
   margin: 0px auto;
-    @include mq(tablet-only) {
+@include mq(mobile-only) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include mq(tablet-only) {
     margin: 15px;
     flex-basis: calc(100% / 2 - 30px);
   }
@@ -31,15 +37,19 @@
 }
 
 .benefits__title {
-  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  @include mq(mobile-only) {
+    text-align: center;
+  }
 }
 
 .benefits__text {
   margin-top: 10px;
   color: var(--secondary-txt--mode-light);
+  
 }

@@ -1,6 +1,5 @@
 .examples-selection__list {
   display: flex;
-  margin-bottom: 40px;
 
   @include mq(mobile-only) {
     flex-wrap: wrap;

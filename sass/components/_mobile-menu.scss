@@ -1,12 +1,58 @@
+// Кнопка мобильного меню
+// body.menu-open {
+//     overflow: hidden;
+// }
+
+.menu-btn {
+  position: relative;
+  margin-left: auto;
+  display: flex;
+  padding: 0;
+  border: 0px;
+  cursor: pointer;
+  background-color: transparent;
+  // overflow-y: scroll;
+  z-index: 5;
+
+  @include mq(tablet) {
+    display: none;
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+
+    &--close {
+      opacity: 1;
+    }
+
+    &--open {
+      opacity: 0;
+    }
+  }
+  &:hover,
+  &:focus {
+    fill: var(--accent-txt);
+  }
+}
+.menu-btn.is-active .menu-btn__icon--close {
+  opacity: 0;
+}
+.menu-btn.is-active .menu-btn__icon--open {
+  opacity: 1;
+}
+
+// Мобильное меню
 .mobile-menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   padding: 48px 40px;
   margin: 0;
   background-color: #ffffff;
+  overflow-y: scroll;
 
   visibility: hidden;
   pointer-events: none;
@@ -15,12 +61,17 @@
   &.is-open {
     visibility: visible;
     pointer-events: initial;
+    z-index: 3;
   }
 }
 
 .mobile-nav__list {
-  margin-bottom: 302px;
+  margin-bottom: 175px;
 }
+
+// .mobile-contacts__wrapper{
+//   margin-top: auto;
+// }
 
 .mobile-nav__item:not(:last-child) {
   margin-bottom: 32px;
@@ -40,6 +91,8 @@
 .mobile-contact {
   display: flex;
   flex-direction: column-reverse;
+  margin-top: auto;
+  margin-bottom: 64px;
 }
 
 .mobile-contact__link--tel {
@@ -54,7 +107,7 @@
 
 .mobile-contact__link--email {
   display: block;
-  margin-bottom: 64px;
+  // margin-bottom: 64px;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.17;
