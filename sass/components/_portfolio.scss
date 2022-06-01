@@ -40,6 +40,7 @@
 
   @include mq(desktop) {
     margin-right: 30px;
+    margin-bottom: 30px;
   }
   &:nth-last-child(-n + 3) {
     @include mq(desktop) {

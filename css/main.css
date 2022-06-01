@@ -940,6 +940,7 @@ ul {
 @media screen and (min-width: 1200px) {
   .examples__item {
     margin-right: 30px;
+    margin-bottom: 30px;
   }
 }
 
